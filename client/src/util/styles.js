@@ -59,8 +59,14 @@ const styles = {
     height: "100%",
   }),
   searchBtn: () => ({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     width: "100%",
     height: "105%",
+    color: "white",
+    backgroundColor: "rgba(217, 82, 165, 1)",
+    borderRadius: "0 7px 7px 0"
   }),
 };
 

@@ -4,6 +4,11 @@ const styles = {
     gridTemplateRows: ".5fr 1fr 5fr",
     height: "100vh",
   }),
+  navContainerUnit: () => ({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  }),
   navContainer: () => ({
     display: "grid",
     gridTemplateColumns: ".5fr repeat(6, 1fr) .25fr repeat(2, 1.5fr) 2fr",

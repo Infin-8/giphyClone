@@ -1,23 +1,27 @@
+// import styles from "../../util/styles";
+
 import styles from "../../util/styles";
 
 const Search = () => {
   return (
     <div
       id="searchBarContainer"
-      style={{
-        width: "75vw",
-        display: "flex",
-        height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={styles.searchBarFlexContainer()}
     >
-      <div className="search-flex-unit" style={{ height: "100%", width: "94%" }}>
-        <input type="text" style={{ width: "99.5%", height: "93%" }} />
+      <div
+        className="search-flex-unit"
+        style={styles.searchInputContainer()}
+      >
+        <input
+          type="text"
+          style={styles.searchInput()}
+          placeholder="Search all GIF and Stickers"
+          id="main-search"
+        />
       </div>
 
-      <div className="search-flex-unit" style={{ width: "6%", height: "100%" }}>
-        <button style={{width: "100%", height: "100%"}}>Search</button>
+      <div className="search-flex-unit" style={styles.searchBtnContainer()}>
+        <button style={styles.searchBtn()}>Search</button>
       </div>
     </div>
   );

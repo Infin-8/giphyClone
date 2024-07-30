@@ -40,3 +40,9 @@ body {
     background: linear-gradient(to right, rgba(176, 57, 233, 1) 0%, rgba(176, 57, 233, 1) 100%) !important;
 }
 
+#main-search::placeholder {
+
+    font-size: x-large;
+    font-weight: 100;
+}
+

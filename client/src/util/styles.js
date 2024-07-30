@@ -1,7 +1,7 @@
 const styles = {
   gridContainer: () => ({
     display: "grid",
-    gridTemplateRows: ".5fr 1.5fr 5fr",
+    gridTemplateRows: ".5fr .5fr 5fr",
     height: "100vh",
   }),
   navContainerUnit: () => ({
@@ -36,9 +36,32 @@ const styles = {
     display: "flex",
     width: "100%",
     justifyContent: "center",
-    alignItems: "center"
-
-  })
+    alignItems: "center",
+  }),
+  searchBarFlexContainer: () => ({
+    width: "75vw",
+    display: "flex",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  }),
+  searchInputContainer: () => ({
+    height: "100%",
+    width: "94%",
+  }),
+  searchInput: () => ({
+    width: "99.2%",
+    height: "95%",
+    borderRadius: "7px 0 0 7px",
+  }),
+  searchBtnContainer: () => ({
+    width: "6%",
+    height: "100%",
+  }),
+  searchBtn: () => ({
+    width: "100%",
+    height: "105%",
+  }),
 };
 
 export default styles;

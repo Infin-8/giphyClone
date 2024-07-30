@@ -1,7 +1,7 @@
 const styles = {
   gridContainer: () => ({
     display: "grid",
-    gridTemplateRows: ".5fr 1fr 5fr",
+    gridTemplateRows: ".5fr 1.5fr 5fr",
     height: "100vh",
   }),
   navContainerUnit: () => ({
@@ -32,6 +32,13 @@ const styles = {
     top: logo ? "10px" : null,
     borderRadius: "3px",
   }),
+  searchBarContainer: () => ({
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center"
+
+  })
 };
 
 export default styles;

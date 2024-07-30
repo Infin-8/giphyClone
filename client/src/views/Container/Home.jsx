@@ -9,7 +9,7 @@ function Home() {
         <Nav />
       </div>
 
-      <div className="main-grid-unit">
+      <div className="main-grid-unit" style={styles.searchBarContainer()}>
         <Search />
       </div>
     </div>

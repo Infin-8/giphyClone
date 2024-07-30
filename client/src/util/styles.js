@@ -13,19 +13,19 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   }),
-  navFlexUnits: (i = false, logo = false) => ({
+  navFlexUnits: (actions = false, logo = false) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     height: "70%",
-    color: i ? "white" : "rgba(4, 209, 246, 1)",
+    color: actions ? "white" : "rgba(4, 209, 246, 1)",
     backgroundColor: "black",
     fontWeight: "bolder",
     fontSize: logo ? "50px" : "15px",
     position: logo ? "relative" : null,
     top: logo ? "10px" : null,
-    borderRadius: "3px"
+    borderRadius: "3px",
   }),
 };
 

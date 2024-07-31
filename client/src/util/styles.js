@@ -8,7 +8,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: "10px"
+    marginBottom: "10px",
   }),
   navContainer: () => ({
     display: "grid",
@@ -33,7 +33,7 @@ const styles = {
     position: logo ? "relative" : null,
     top: logo ? "8px" : null,
     borderRadius: "3px",
-    fontStretch: logo ? "ultra-expanded" : "normal"
+    fontStretch: logo ? "ultra-expanded" : "normal",
   }),
   searchBarContainer: () => ({
     display: "flex",
@@ -60,7 +60,6 @@ const styles = {
   searchBtnContainer: () => ({
     width: "6%",
     height: "100%",
-
   }),
   searchBtn: () => ({
     display: "flex",
@@ -74,12 +73,37 @@ const styles = {
     fontSize: "xx-large",
   }),
   mainImageContainer: () => ({
-    display: 'grid',
+    display: "grid",
     gridTemplateColumns: ".33fr .45fr 1.7fr .33fr",
-    height: "100%"
+    height: "100%",
   }),
   subImageContainer: (position) => ({
-    height: "100%"
+    height: "100%",
+  }),
+  addContainer: () => ({
+    display: "grid",
+    gridTemplateRows: "4fr 4fr",
+  }),
+  addUnit: () => ({
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
+    borderBottom: "1px solid gray",
+    marginTop: "10%"
+  }),
+  quickFlex: () => ({
+    display: "flex",
+    justifyContent: "spaceAround",
+    color: "white",
+    width: "100%"
+  }),
+  socialUnit: () => ({
+    width: "23%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: "10%"
   })
 };
 

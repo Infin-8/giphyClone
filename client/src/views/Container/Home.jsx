@@ -17,8 +17,31 @@ function Home() {
         <div className="sub-grid-unit" style={styles.subImageContainer(0)}>
           empty
         </div>
-        <div className="sub-grid-unit" style={styles.subImageContainer(1)}>
-          adds here
+        <div
+          className="sub-grid-unit"
+          style={{ ...styles.subImageContainer(1), ...styles.addContainer() }}
+        >
+          <div className="add-unit" style={styles.addUnit()}>
+            <img
+              alt="homePic"
+              src="https://media.giphy.com/avatars/entertainment/Poc7fb6dD9q5/200h.gif"
+            />
+            <p style={{ color: "rgba(125, 125, 125, 1)", width: "100%" }}>
+              Get the latest GIFs from movies, TV, music, celebrities
+            </p>
+            <p style={{ color: "rgba(166, 166, 166, 1)", width: "100%" }}>
+              Follow on:
+            </p>
+
+            <div className="add-unit" style={styles.quickFlex()}>
+              <div className="add-flex-unit" style={styles.socialUnit()}>f</div>
+              <div className="add-flex-unit" style={styles.socialUnit()}>X</div>
+              <div className="add-flex-unit" style={styles.socialUnit()}>I</div>
+              <div className="add-flex-unit" style={styles.socialUnit()}>TT</div>
+            </div>
+          </div>
+
+          <div className="add-unit"></div>
         </div>
         <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
           images here

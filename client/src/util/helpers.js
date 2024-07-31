@@ -32,3 +32,5 @@ export const navActionBtns = () => [
     { value: "Create", backgroundColor: "rgba(153, 51, 255, 1)" },
     { value: "Log in", backgroundColor: "rgba(62, 62, 62, 1)" },
   ]
+
+  export const getTrending = () => ["oscars", "briderton", "walking dead", "kim k", "grammys"]

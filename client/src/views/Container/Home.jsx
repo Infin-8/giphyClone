@@ -1,6 +1,7 @@
 import Nav from "../Presentational/Nav";
 import styles from "../../util/styles";
 import Search from "../Presentational/Search";
+import { getTrending } from "../../util/helpers";
 
 function Home() {
   return (
@@ -50,9 +51,25 @@ function Home() {
             </div>
           </div>
 
-          <div className="add-unit" style={styles.quickFlex()}>
-            <div className="add-flex-unit" style={{height: "10%", width: "100%", marginTop: "10%"}}>
-              <Search mini/>
+          <div
+            className="add-unit"
+            style={{ ...styles.quickFlex(), flexDirection: "column" }}
+          >
+            <div
+              className="add-flex-unit"
+              style={{ ...styles.miniSearch(), marginBottom: "10%" }}
+            >
+              <Search mini />
+            </div>
+            <div className="add-flex-unit">
+              <p style={{ color: "rgba(166, 166, 166, 1)" }}>Trending Now</p>
+              {getTrending()
+                .map((item) => "#" + item)
+                .map((item, i) => (
+                  <p key={"trending-" + i}>
+                    {item}
+                  </p>
+                ))}
             </div>
           </div>
         </div>

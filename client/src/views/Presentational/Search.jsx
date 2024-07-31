@@ -2,7 +2,7 @@
 
 import styles from "../../util/styles";
 
-const Search = ({ mini= false }) => {
+const Search = ({ mini = false }) => {
   return (
     <div id="searchBarContainer" style={styles.searchBarFlexContainer(mini)}>
       <div
@@ -12,7 +12,9 @@ const Search = ({ mini= false }) => {
         <input
           type="text"
           style={styles.searchInput(mini)}
-          placeholder={mini ? "Search Entertainment GIFs" : "Search all GIFs and Stickers"}
+          placeholder={
+            mini ? "Search Entertainment GIFs" : "Search all GIFs and Stickers"
+          }
           id={mini ? null : "main-search"}
         />
       </div>

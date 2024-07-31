@@ -74,7 +74,7 @@ const styles = {
   }),
   mainImageContainer: () => ({
     display: "grid",
-    gridTemplateColumns: ".33fr .45fr 1.7fr .33fr",
+    gridTemplateColumns: ".33fr .45fr 1.5fr .31fr",
     height: "100%",
   }),
   subImageContainer: (position) => ({
@@ -88,15 +88,16 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    alignItems: "center",
+    // alignItems: "center",
     borderBottom: "1px solid gray",
     marginTop: "10%"
   }),
   quickFlex: () => ({
     display: "flex",
-    justifyContent: "spaceAround",
+    justifyContent: "spaceBetween",
     color: "white",
-    width: "100%"
+    width: "100%",
+    height: "100%"
   }),
   socialUnit: () => ({
     width: "23%",
@@ -104,6 +105,14 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     marginBottom: "10%"
+  }),
+  miniSearch: () => ({
+    height: "10%",
+    width: "100%",
+    marginTop: "10%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around"
   })
 };
 

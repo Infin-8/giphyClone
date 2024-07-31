@@ -12,6 +12,21 @@ function Home() {
       <div className="main-grid-unit" style={styles.searchBarContainer()}>
         <Search />
       </div>
+
+      <div className="main-grid-unit" style={styles.mainImageContainer()}>
+        <div className="sub-grid-unit" style={styles.subImageContainer(0)}>
+          empty
+        </div>
+        <div className="sub-grid-unit" style={styles.subImageContainer(1)}>
+          adds here
+        </div>
+        <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
+          images here
+        </div>
+        <div className="sub-grid-unit" style={styles.subImageContainer(4)}>
+          empty here
+        </div>
+      </div>
     </div>
   );
 }

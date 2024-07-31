@@ -73,6 +73,14 @@ const styles = {
     borderRadius: "0 7px 7px 0",
     fontSize: "xx-large",
   }),
+  mainImageContainer: () => ({
+    display: 'grid',
+    gridTemplateColumns: ".33fr .45fr 1.7fr .33fr",
+    height: "100%"
+  }),
+  subImageContainer: (position) => ({
+    height: "100%"
+  })
 };
 
 export default styles;

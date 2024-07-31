@@ -8,6 +8,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: "10px"
   }),
   navContainer: () => ({
     display: "grid",
@@ -24,13 +25,15 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "70%",
-    color: actions ? "white" : "rgba(4, 209, 246, 1)",
+    color: logo || actions ? "white" : "rgba(4, 209, 246, 1)",
     backgroundColor: "black",
-    fontWeight: "bolder",
-    fontSize: logo ? "50px" : "15px",
+    fontWeight: logo ? 900 : 100,
+    fontFamily: logo ? "Arial" : "sans-serif",
+    fontSize: logo ? "40px" : "15px",
     position: logo ? "relative" : null,
-    top: logo ? "10px" : null,
+    top: logo ? "8px" : null,
     borderRadius: "3px",
+    fontStretch: logo ? "ultra-expanded" : "normal"
   }),
   searchBarContainer: () => ({
     display: "flex",
@@ -57,6 +60,7 @@ const styles = {
   searchBtnContainer: () => ({
     width: "6%",
     height: "100%",
+
   }),
   searchBtn: () => ({
     display: "flex",
@@ -66,7 +70,8 @@ const styles = {
     height: "105%",
     color: "white",
     backgroundColor: "rgba(217, 82, 165, 1)",
-    borderRadius: "0 7px 7px 0"
+    borderRadius: "0 7px 7px 0",
+    fontSize: "xx-large",
   }),
 };
 

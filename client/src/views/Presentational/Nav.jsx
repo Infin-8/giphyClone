@@ -3,7 +3,7 @@ import { navMainBtns, navActionBtns } from "../../util/helpers";
 const Nav = () => (
   <nav style={styles.navContainer()}>
     <div style={styles.navFlexUnits()} className="nav-unit"></div>
-    <div style={styles.navFlexUnits(true, true)} className="nav-unit">
+    <div style={styles.navFlexUnits(false, true)} className="nav-unit">
       GIPHY
     </div>
     {navMainBtns().map(({ value, id, className }, i) => (

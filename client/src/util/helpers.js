@@ -30,5 +30,5 @@ export const navMainBtns = () => [
 export const navActionBtns = () => [
     { value: "Upload", backgroundColor: "rgba(97, 87, 255, 1)" },
     { value: "Create", backgroundColor: "rgba(153, 51, 255, 1)" },
-    { value: "Login", backgroundColor: "rgba(62, 62, 62, 1)" },
+    { value: "Log in", backgroundColor: "rgba(62, 62, 62, 1)" },
   ]

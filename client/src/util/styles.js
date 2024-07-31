@@ -1,7 +1,7 @@
 const styles = {
   gridContainer: () => ({
     display: "grid",
-    gridTemplateRows: ".5fr .5fr 5fr",
+    gridTemplateRows: ".5fr 7vh",
     height: "100vh",
   }),
   navContainerUnit: () => ({
@@ -41,36 +41,36 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   }),
-  searchBarFlexContainer: () => ({
-    width: "75vw",
+  searchBarFlexContainer: (mini = false) => ({
+    width: mini ? "100%": "75%",
     display: "flex",
     height: "100%",
     justifyContent: "center",
     alignItems: "center",
   }),
-  searchInputContainer: () => ({
+  searchInputContainer: (mini) => ({
     height: "100%",
     width: "94%",
   }),
-  searchInput: () => ({
-    width: "99.2%",
-    height: "95%",
+  searchInput: (mini) => ({
+    width: mini ? "95%": "99.2%",
+    height: "100%",
     borderRadius: "7px 0 0 7px",
   }),
-  searchBtnContainer: () => ({
-    width: "6%",
+  searchBtnContainer: (mini) => ({
+    width: mini ? "25%": "6%",
     height: "100%",
   }),
-  searchBtn: () => ({
+  searchBtn: (mini = false) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
     height: "105%",
     color: "white",
-    backgroundColor: "rgba(217, 82, 165, 1)",
-    borderRadius: "0 7px 7px 0",
-    fontSize: "xx-large",
+    backgroundColor: mini ? "rgba(33, 33, 33, 1)": "rgba(217, 82, 165, 1)",
+    borderRadius: mini ? "0 2px 2px 0" : "0 7px 7px 0",
+    fontSize: mini ? "x-small" : "xx-large",
   }),
   mainImageContainer: () => ({
     display: "grid",

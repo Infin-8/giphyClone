@@ -37,16 +37,16 @@ function Home() {
 
             <div className="add-unit" style={styles.quickFlex()}>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-              <i class="fa-brands fa-facebook" />
+                <i className="fa-brands fa-facebook" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-              <i class="fa-brands fa-x-twitter" />
+                <i className="fa-brands fa-x-twitter" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-              <i class="fa-brands fa-instagram" />
+                <i className="fa-brands fa-instagram" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-              <i class="fa-brands fa-tiktok" />
+                <i className="fa-brands fa-tiktok" />
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@ function Home() {
             className="images-grid-unit"
             style={{
               height: "100%",
-              paddingLeft: "5%"
+              paddingLeft: "5%",
             }}
           >
             <p
@@ -108,15 +108,27 @@ function Home() {
           <div className="images-grid-unit" style={styles.storiesMain()}>
             <div className="stories-unit" style={styles.storiesMainContainer()}>
               <div className="stories-flex-unit" style={styles.storiesHeader()}>
-                Stories icon
+                Stories{" "}
+                <span>
+                  <i
+                    class="fa-solid fa-chevron-right"
+                    style={{ fontSize: "small" }}
+                  />
+                </span>
               </div>
               <div
                 className="stories-flex-unit"
                 style={styles.storiesFlexItem(true)}
               >
-                <i class="fa-solid fa-chevron-left" style={{color: "white"}} />
-                <i class="fa-solid fa-chevron-right" style={{color: "white"}} />
-              </div> 
+                <i
+                  className="fa-solid fa-chevron-left"
+                  style={{ color: "white" }}
+                />
+                <i
+                  className="fa-solid fa-chevron-right"
+                  style={{ color: "white" }}
+                />
+              </div>
             </div>
           </div>
 

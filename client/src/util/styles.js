@@ -42,7 +42,7 @@ const styles = {
     alignItems: "center",
   }),
   searchBarFlexContainer: (mini = false) => ({
-    width: mini ? "100%": "76%",
+    width: mini ? "100%" : "76%",
     display: "flex",
     height: "100%",
     justifyContent: "center",
@@ -53,12 +53,12 @@ const styles = {
     width: "94%",
   }),
   searchInput: (mini) => ({
-    width: mini ? "95%": "99.2%",
+    width: mini ? "95%" : "99.2%",
     height: "100%",
     borderRadius: "7px 0 0 7px",
   }),
   searchBtnContainer: (mini) => ({
-    width: mini ? "25%": "6%",
+    width: mini ? "25%" : "6%",
     height: "100%",
   }),
   searchBtn: (mini = false) => ({
@@ -68,7 +68,7 @@ const styles = {
     width: "100%",
     height: "105%",
     color: "white",
-    backgroundColor: mini ? "rgba(33, 33, 33, 1)": "rgba(217, 82, 165, 1)",
+    backgroundColor: mini ? "rgba(33, 33, 33, 1)" : "rgba(217, 82, 165, 1)",
     borderRadius: mini ? "0 2px 2px 0" : "0 7px 7px 0",
     fontSize: mini ? "x-small" : "xx-large",
   }),
@@ -76,7 +76,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: ".34fr .45fr 1.7fr .34fr",
     height: "100%",
-    marginTop: "3%"
+    marginTop: "3%",
   }),
   subImageContainer: (position) => ({
     height: "100%",
@@ -99,14 +99,14 @@ const styles = {
     justifyContent: "spaceBetween",
     color: "white",
     width: "100%",
-    height: "100%"
+    height: "100%",
   }),
   socialUnit: () => ({
     width: "23%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: "10%"
+    marginBottom: "10%",
   }),
   miniSearch: () => ({
     height: "10%",
@@ -114,7 +114,35 @@ const styles = {
     marginTop: "10%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+  }),
+  storiesMain: () => ({
+    display: "grid",
+    gridTemplateRows: ".5fr 3fr",
+    height: "100%",
+  }),
+  storiesMainContainer: () => ({
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    paddingLeft: "5%"
+  }),
+  storiesItem: () => ({
+    height: "100%",
+    paddingLeft: "5%",
+  }),
+  storiesHeader: () => ({
+    width: "50%",
+    color: "white",
+    color: "rgba(166, 166, 166, 1)",
+    fontSize: "large"
+  }),
+  storiesFlexItem: (right) => ({
+    width: "50%", 
+    justifyContent:"end", 
+    display: "flex",
+    paddingRight: right ? "5%" : null
   })
 };
 

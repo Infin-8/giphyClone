@@ -76,16 +76,50 @@ function Home() {
 
           <div
             className="images-grid-unit"
-            style={{ height: "100%", border: "1px solid red", paddingLeft: "5%" }}
+            style={{
+              height: "100%",
+              paddingLeft: "5%"
+            }}
           >
-            <p style={{ fontFamily: "sans-serif", color: "white", fontSize: "xx-large", fontWeight: "bolder", width: "100%"}}>
+            <p
+              style={{
+                fontFamily: "sans-serif",
+                color: "white",
+                fontSize: "xx-large",
+                fontWeight: "bolder",
+                width: "100%",
+              }}
+            >
               Entertainment GIFs
             </p>
-            <p style={{ fontFamily: "helvetica", color: "rgba(166, 166, 166, 1)", fontSize: "small", position: "relative", top: "-20px", }}>
+            <p
+              style={{
+                fontFamily: "helvetica",
+                color: "rgba(166, 166, 166, 1)",
+                fontSize: "small",
+                position: "relative",
+                top: "-20px",
+              }}
+            >
               @entertainment
             </p>
           </div>
-          <div className="images-grid-unit"></div>
+
+          <div className="images-grid-unit" style={styles.storiesMain()}>
+            <div className="stories-unit" style={styles.storiesMainContainer()}>
+              <div className="stories-flex-unit" style={styles.storiesHeader()}>
+                Stories icon
+              </div>
+              <div
+                className="stories-flex-unit"
+                style={styles.storiesFlexItem(true)}
+              >
+                <button>Left</button>
+                <button>Right</button>
+              </div>
+            </div>
+          </div>
+
           <div className="images-grid-unit"></div>
           <div className="images-grid-unit"></div>
         </div>

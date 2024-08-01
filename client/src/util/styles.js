@@ -137,6 +137,7 @@ const styles = {
     color: "white",
     color: "rgba(166, 166, 166, 1)",
     fontSize: "large"
+    
   }),
   storiesFlexItem: (right) => ({
     width: "50%", 

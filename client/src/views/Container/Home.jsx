@@ -37,16 +37,16 @@ function Home() {
 
             <div className="add-unit" style={styles.quickFlex()}>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                f
+              <i class="fa-brands fa-facebook" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                X
+              <i class="fa-brands fa-x-twitter" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                I
+              <i class="fa-brands fa-instagram" />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                TT
+              <i class="fa-brands fa-tiktok" />
               </div>
             </div>
           </div>
@@ -114,9 +114,9 @@ function Home() {
                 className="stories-flex-unit"
                 style={styles.storiesFlexItem(true)}
               >
-                <button>Left</button>
-                <button>Right</button>
-              </div>
+                <i class="fa-solid fa-chevron-left" style={{color: "white"}} />
+                <i class="fa-solid fa-chevron-right" style={{color: "white"}} />
+              </div> 
             </div>
           </div>
 

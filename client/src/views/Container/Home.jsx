@@ -66,15 +66,28 @@ function Home() {
               {getTrending()
                 .map((item) => "#" + item)
                 .map((item, i) => (
-                  <p key={"trending-" + i}>
-                    {item}
-                  </p>
+                  <p key={"trending-" + i}>{item}</p>
                 ))}
             </div>
           </div>
         </div>
         <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
           {/* images here */}
+
+          <div
+            className="images-grid-unit"
+            style={{ height: "100%", border: "1px solid red", paddingLeft: "5%" }}
+          >
+            <p style={{ fontFamily: "sans-serif", color: "white", fontSize: "xx-large", fontWeight: "bolder", width: "100%"}}>
+              Entertainment GIFs
+            </p>
+            <p style={{ fontFamily: "helvetica", color: "rgba(166, 166, 166, 1)", fontSize: "small", position: "relative", top: "-20px", }}>
+              @entertainment
+            </p>
+          </div>
+          <div className="images-grid-unit"></div>
+          <div className="images-grid-unit"></div>
+          <div className="images-grid-unit"></div>
         </div>
         <div className="sub-grid-unit" style={styles.subImageContainer(4)}>
           empty here

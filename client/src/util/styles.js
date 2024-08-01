@@ -42,7 +42,7 @@ const styles = {
     alignItems: "center",
   }),
   searchBarFlexContainer: (mini = false) => ({
-    width: mini ? "100%": "75%",
+    width: mini ? "100%": "76%",
     display: "flex",
     height: "100%",
     justifyContent: "center",
@@ -74,11 +74,15 @@ const styles = {
   }),
   mainImageContainer: () => ({
     display: "grid",
-    gridTemplateColumns: ".33fr .45fr 1.5fr .31fr",
+    gridTemplateColumns: ".34fr .45fr 1.7fr .34fr",
     height: "100%",
+    marginTop: "3%"
   }),
   subImageContainer: (position) => ({
     height: "100%",
+    display: position === 2 ? "grid" : "block",
+    gridTemplateRows: position === 2 ? ".25fr .5fr .75fr auto" : null,
+    alignItems: position === 2 ? "flex-end" : null,
   }),
   addContainer: () => ({
     display: "grid",
@@ -88,9 +92,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    // alignItems: "center",
     borderBottom: "1px solid gray",
-    marginTop: "10%"
   }),
   quickFlex: () => ({
     display: "flex",

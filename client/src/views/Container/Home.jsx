@@ -130,6 +130,23 @@ function Home() {
                 />
               </div>
             </div>
+
+            <div className="stories-unit">
+              <div
+                id="stories-images-grid-main"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  width: "100%",
+                  height: "100%"
+                }}
+              >
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
+              </div>
+            </div>
           </div>
 
           <div className="images-grid-unit"></div>

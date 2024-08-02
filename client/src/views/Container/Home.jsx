@@ -2,6 +2,7 @@ import Nav from "../Presentational/Nav";
 import styles from "../../util/styles";
 import Search from "../Presentational/Search";
 import { getTrending } from "../../util/helpers";
+import DefaultImage from "../Presentational/DefaultImage";
 
 function Home() {
   return (
@@ -23,10 +24,8 @@ function Home() {
           style={{ ...styles.subImageContainer(1), ...styles.addContainer() }}
         >
           <div className="add-unit" style={styles.addUnit()}>
-            <img
-              alt="homePic"
-              src="https://media.giphy.com/avatars/entertainment/Poc7fb6dD9q5/200h.gif"
-            />
+            <DefaultImage />
+
             <p style={{ color: "rgba(125, 125, 125, 1)", width: "100%" }}>
               Get the latest GIFs from movies, TV, music, celebrities
             </p>
@@ -141,10 +140,18 @@ function Home() {
                   height: "100%"
                 }}
               >
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}></div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+                  <DefaultImage mini/>
+                </div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+                  <DefaultImage mini />
+                </div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+                  <DefaultImage mini />
+                </div>
+                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+                  <DefaultImage mini />
+                </div>
               </div>
             </div>
           </div>

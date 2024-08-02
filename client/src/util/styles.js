@@ -134,7 +134,6 @@ const styles = {
   }),
   storiesHeader: () => ({
     width: "50%",
-    color: "white",
     color: "rgba(166, 166, 166, 1)",
     fontSize: "large"
     
@@ -144,6 +143,10 @@ const styles = {
     justifyContent:"end", 
     display: "flex",
     paddingRight: right ? "5%" : null
+  }),
+  defaultImage: mini => ({
+    padding: "5% 0 0 5%",
+    height: mini ? "20%" : "100%"
   })
 };
 

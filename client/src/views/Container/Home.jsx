@@ -3,6 +3,14 @@ import styles from "../../util/styles";
 import Search from "../Presentational/Search";
 import { getTrending } from "../../util/helpers";
 import DefaultImage from "../Presentational/DefaultImage";
+import MainHeadLine from "../Presentational/MainHeadLine";
+import MainHeader from "../Presentational/MainHeader";
+import Facebook from "../Presentational/Facebook";
+import Twitter from "../Presentational/Twitter";
+import Instagram from "../Presentational/Instagram";
+import TikTok from "../Presentational/TikTok";
+import Trending from "../Presentational/Trending";
+import ImagesHeadLine from "../Presentational/ImagesHeadLine";
 
 function Home() {
   return (
@@ -19,6 +27,7 @@ function Home() {
         <div className="sub-grid-unit" style={styles.subImageContainer(0)}>
           empty
         </div>
+
         <div
           className="sub-grid-unit"
           style={{ ...styles.subImageContainer(1), ...styles.addContainer() }}
@@ -26,26 +35,22 @@ function Home() {
           <div className="add-unit" style={styles.addUnit()}>
             <DefaultImage />
 
-            <p style={{ color: "rgba(125, 125, 125, 1)", width: "100%" }}>
-              Get the latest GIFs from movies, TV, music, celebrities
-            </p>
+            <MainHeadLine />
 
-            <p style={{ color: "rgba(166, 166, 166, 1)", width: "100%" }}>
-              Follow on:
-            </p>
+            <MainHeader />
 
             <div className="add-unit" style={styles.quickFlex()}>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                <i className="fa-brands fa-facebook" />
+                <Facebook />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                <i className="fa-brands fa-x-twitter" />
+                <Twitter />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                <i className="fa-brands fa-instagram" />
+                <Instagram />
               </div>
               <div className="add-flex-unit" style={styles.socialUnit()}>
-                <i className="fa-brands fa-tiktok" />
+                <TikTok />
               </div>
             </div>
           </div>
@@ -61,47 +66,16 @@ function Home() {
               <Search mini />
             </div>
             <div className="add-flex-unit">
-              <p style={{ color: "rgba(166, 166, 166, 1)" }}>Trending Now</p>
-              {getTrending()
-                .map((item) => "#" + item)
-                .map((item, i) => (
-                  <p key={"trending-" + i}>{item}</p>
-                ))}
+              <Trending data={getTrending()} />
             </div>
           </div>
-        </div>
-        <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
-          {/* images here */}
 
-          <div
-            className="images-grid-unit"
-            style={{
-              height: "100%",
-              paddingLeft: "5%",
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                color: "white",
-                fontSize: "xx-large",
-                fontWeight: "bolder",
-                width: "100%",
-              }}
-            >
-              Entertainment GIFs
-            </p>
-            <p
-              style={{
-                fontFamily: "helvetica",
-                color: "rgba(166, 166, 166, 1)",
-                fontSize: "small",
-                position: "relative",
-                top: "-20px",
-              }}
-            >
-              @entertainment
-            </p>
+        </div>
+
+        <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
+
+          <div className="images-grid-unit" style={styles.imagesMainGrid()}>
+            <ImagesHeadLine />
           </div>
 
           <div className="images-grid-unit" style={styles.storiesMain()}>
@@ -131,27 +105,23 @@ function Home() {
             </div>
 
             <div className="stories-unit">
-              <div
-                id="stories-images-grid-main"
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr)",
-                  width: "100%",
-                  height: "100%"
-                }}
-              >
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
-                  <DefaultImage mini/>
-                </div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+              <div id="stories-images-grid-main" style={styles.storiesImageGrid()}>
+                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
                   <DefaultImage mini />
                 </div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+
+                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
                   <DefaultImage mini />
                 </div>
-                <div id="images-grid-main-unit" style={{border: '1px solid red'}}>
+
+                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
                   <DefaultImage mini />
                 </div>
+
+                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
+                  <DefaultImage mini />
+                </div>
+                
               </div>
             </div>
           </div>

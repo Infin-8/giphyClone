@@ -126,7 +126,7 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    paddingLeft: "5%"
+    paddingLeft: "5%",
   }),
   storiesItem: () => ({
     height: "100%",
@@ -135,18 +135,52 @@ const styles = {
   storiesHeader: () => ({
     width: "50%",
     color: "rgba(166, 166, 166, 1)",
-    fontSize: "large"
-    
+    fontSize: "large",
   }),
   storiesFlexItem: (right) => ({
-    width: "50%", 
-    justifyContent:"end", 
+    width: "50%",
+    justifyContent: "end",
     display: "flex",
-    paddingRight: right ? "5%" : null
+    paddingRight: right ? "5%" : null,
   }),
-  defaultImage: mini => ({
+  defaultImage: (mini) => ({
     padding: "5% 0 0 5%",
-    height: mini ? "20%" : "100%"
+    height: mini ? "20%" : "100%",
+  }),
+  mainHeadLine: () => ({
+    color: "rgba(125, 125, 125, 1)",
+    width: "100%",
+  }),
+  mainHeader: () => ({
+    color: "rgba(166, 166, 166, 1)",
+    width: "100%",
+  }),
+  imagesMainGrid: () => ({
+    height: "100%",
+    paddingLeft: "5%",
+  }),
+  imagesHeadLine: () => ({
+    fontFamily: "sans-serif",
+    color: "white",
+    fontSize: "xx-large",
+    fontWeight: "bolder",
+    width: "100%",
+  }),
+  imagesSubLine: () => ({
+    fontFamily: "helvetica",
+    color: "rgba(166, 166, 166, 1)",
+    fontSize: "small",
+    position: "relative",
+    top: "-20px",
+  }),
+  storiesImageGrid: () => ({
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    width: "100%",
+    height: "100%",
+  }),
+  imagesGridUnit: () => ({
+    border: "1px solid red"
   })
 };
 

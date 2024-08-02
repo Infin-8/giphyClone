@@ -116,6 +116,7 @@ function Home() {
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
                   <DefaultImage mini />
+                  {test}
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>

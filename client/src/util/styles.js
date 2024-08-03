@@ -178,8 +178,9 @@ const styles = {
   storiesImageGrid: () => ({
     display: "grid",
     gridTemplateColumns: "repeat(4, 1fr)",
-    width: "100%",
+    width: "95%",
     height: "100%",
+    paddingLeft: "5%"
   }),
   imagesGridUnit: () => ({
     border: "1px solid red",

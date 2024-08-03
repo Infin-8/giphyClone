@@ -143,9 +143,11 @@ const styles = {
     display: "flex",
     paddingRight: right ? "5%" : null,
   }),
-  defaultImage: (mini) => ({
+  defaultImage: (mini = false) => ({
     padding: "5% 0 0 5%",
     height: mini ? "20%" : "100%",
+    zIndex: mini ? Infinity : -Infinity,
+    position: mini ? "relative" : null,
   }),
   mainHeadLine: () => ({
     color: "rgba(125, 125, 125, 1)",
@@ -180,8 +182,30 @@ const styles = {
     height: "100%",
   }),
   imagesGridUnit: () => ({
-    border: "1px solid red"
-  })
+    border: "1px solid red",
+  }),
+  featuredMain: (position) => ({
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    height: "100%",
+    position: "relative",
+    top: position === 0 ? "16%" : position === 1 ? "1%" : "20%",
+    width: "100%",
+    zIndex: position === 0 ? 3 : position === 1 ? 2 : 1,
+  }),
+  featuredSub: (position) => ({
+    width: position === 0 ? "94%" : position === 1 ? "92%" : "90%",
+    borderBottom:
+      position === 3
+        ? "10px solid rgba(73, 32, 113, 1)"
+        : position === 2
+        ? "7px solid rgba(99, 38, 161, 1)"
+        : "7px solid rgba(125, 45, 208, 1)",
+      position: "relative",
+
+  }),
 };
 
 export default styles;

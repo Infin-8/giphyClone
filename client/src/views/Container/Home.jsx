@@ -11,6 +11,7 @@ import Instagram from "../Presentational/Instagram";
 import TikTok from "../Presentational/TikTok";
 import Trending from "../Presentational/Trending";
 import ImagesHeadLine from "../Presentational/ImagesHeadLine";
+import Featured from "../Presentational/Featured";
 
 function Home() {
   return (
@@ -69,11 +70,9 @@ function Home() {
               <Trending data={getTrending()} />
             </div>
           </div>
-
         </div>
 
         <div className="sub-grid-unit" style={styles.subImageContainer(2)}>
-
           <div className="images-grid-unit" style={styles.imagesMainGrid()}>
             <ImagesHeadLine />
           </div>
@@ -105,24 +104,25 @@ function Home() {
             </div>
 
             <div className="stories-unit">
-              <div id="stories-images-grid-main" style={styles.storiesImageGrid()}>
+              <div
+                id="stories-images-grid-main"
+                style={styles.storiesImageGrid()}
+              >
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <DefaultImage mini />
+                  <Featured />
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <DefaultImage mini />
+                  <Featured />
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <DefaultImage mini />
-                  {test}
+                  <Featured />
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <DefaultImage mini />
+                  <Featured />
                 </div>
-                
               </div>
             </div>
           </div>

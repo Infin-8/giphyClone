@@ -146,8 +146,8 @@ const styles = {
   defaultImage: (mini = false) => ({
     padding: "5% 0 0 5%",
     height: mini ? "20%" : "100%",
-    zIndex: mini ? Infinity : -Infinity,
-    position: mini ? "relative" : null,
+    zIndex: mini ? "2" : null,
+    position: mini ? "absoulte" : null,
   }),
   mainHeadLine: () => ({
     color: "rgba(125, 125, 125, 1)",
@@ -184,7 +184,7 @@ const styles = {
     gap: "1%"
   }),
   imagesGridUnit: () => ({
-    border: "1px solid red",
+    // border: "1px solid red",
   }),
   featuredMain: (position) => ({
     display: "flex",
@@ -192,21 +192,21 @@ const styles = {
     alignItems: "center",
     flexDirection: "column",
     height: "100%",
-    position: "relative",
     top: "15%",
     width: "100%",
-    zIndex: position === 0 ? 3 : position === 1 ? 2 : 1,
+    zIndex: "1"
   }),
   featuredSub: (position) => ({
-    width: position === 0 ? "95%" : position === 1 ? "90%" : "85%",
+    width: position === 0 ? "100%" : position === 1 ? "93%" : "88%",
     borderBottom:
       position === 2
         ? "5px solid rgba(73, 32, 113, 1)"
         : position === 1
         ? "5px solid rgba(99, 38, 161, 1)"
-        : "5px solid rgba(125, 45, 208, 1)",
-      position: "relative",
-
+        : position === 0 
+        ? "5px solid rgba(125, 45, 208, 1)"
+        : null,
+      zIndex: "1"
   }),
 };
 

@@ -1,10 +1,10 @@
 import DefaultImage from "./DefaultImage";
 import CardStack from "./CardStack";
 
-const Featured = () => (
+const Featured = ({ position }) => (
   <>
     <DefaultImage mini />
-    <CardStack />
+    <CardStack position={position} />
   </>
 );
 

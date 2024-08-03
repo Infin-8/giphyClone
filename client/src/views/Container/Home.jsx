@@ -109,19 +109,19 @@ function Home() {
                 style={styles.storiesImageGrid()}
               >
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <Featured />
+                  <Featured position={0}/>
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <Featured />
+                  <Featured position={1}/>
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <Featured />
+                  <Featured position={2}/>
                 </div>
 
                 <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <Featured />
+                  <Featured position={3}/>
                 </div>
               </div>
             </div>

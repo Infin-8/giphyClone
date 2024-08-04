@@ -181,10 +181,10 @@ const styles = {
     width: "94%",
     height: "100%",
     paddingLeft: "5%",
-    gap: "1%"
+    gap: "1%",
   }),
   storiesArrow: () => ({
-    color: 'white'
+    color: "white",
   }),
   imagesGridUnit: () => ({
     // border: "1px solid red",
@@ -197,7 +197,7 @@ const styles = {
     height: "100%",
     top: "15%",
     width: "100%",
-    zIndex: "1"
+    zIndex: "1",
   }),
   featuredSub: (position, src = "") => ({
     width: position === 0 ? "100%" : position === 1 ? "93%" : "88%",
@@ -206,15 +206,44 @@ const styles = {
         ? "5px solid rgba(73, 32, 113, 1)"
         : position === 1
         ? "5px solid rgba(99, 38, 161, 1)"
-        : position === 0 
+        : position === 0
         ? "5px solid rgba(125, 45, 208, 1)"
         : null,
-      zIndex: "1",
-      height: position === 0 ?  "100%": null,
-      backgroundImage: `url(${src})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center"
+    zIndex: "1",
+    height: position === 0 ? "100%" : null,
+    backgroundImage: `url(${src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   }),
+  mainGifUnit: (src, random) => ({
+    height: parseInt(random) > 30 ? random : "30%",
+    backgroundImage: `url(${src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }),
+  mainGifGridContainer: () => ({
+    display: "grid",
+    gridTemplateRows: `.5fr minmax(100px, 5fr)`,
+    gap: "2%",
+    width: "95%",
+    height: "95%",
+    padding: "0 5% 0",
+    marginTop: "3%",
+    marginRight: "5%",
+  }),
+  gifHeaderContainer: () => ({
+    display: "flex",
+    width: "50%",
+    height: "100%",
+  }),
+  gifMainContainer: () => ({
+    display: "grid",
+    gridTemplateColumns: `repeat(3, minmax(30%, 1fr))`,
+    gap: "2%",
+    width: "100%",
+    height: "95%",
+    marginTop: "3%",
+  })
 };
 
 export default styles;

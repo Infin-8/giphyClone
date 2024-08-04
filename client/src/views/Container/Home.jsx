@@ -1,5 +1,10 @@
 import styles from "../../util/styles";
-import { getTrending, getGIFs } from "../../util/helpers";
+import {
+  getTrending,
+  getGIFs,
+  getFeatured,
+  randomHeight,
+} from "../../util/helpers";
 import Nav from "../Presentational/Nav";
 import Search from "../Presentational/Search";
 import DefaultImage from "../Presentational/DefaultImage";
@@ -16,6 +21,7 @@ import Arrows from "../Presentational/Arrows";
 import StoriesHeader from "../Presentational/StoriesHeader";
 
 function Home() {
+
   return (
     <div style={styles.gridContainer()}>
       <div className="main-grid unit" style={styles.navContainerUnit()}>
@@ -87,7 +93,7 @@ function Home() {
                 id="stories-images-grid-main"
                 style={styles.storiesImageGrid()}
               >
-                {getGIFs().map((src, i) => (
+                {getFeatured().map((src, i) => (
                   <div
                     key={"gif" + i}
                     id="images-grid-main-unit"
@@ -100,7 +106,48 @@ function Home() {
             </div>
           </div>
 
-          <div className="images-grid-unit" />
+          <div
+            className="images-grid-unit"
+            style={styles.mainGifGridContainer()}
+          >
+            <div
+              id="sub-gif-container"
+              style={{
+                ...styles.quickFlex(),
+                justifyContent: "space-evenly",
+              }}
+            >
+              <div
+                id="gif-header-flex-unit"
+                style={styles.gifHeaderContainer()}
+              >
+                <p style={{ color: "rgba(166, 166, 166, 1)" }}>
+                  All Entertainment GIFs
+                </p>
+              </div>
+              <div
+                id="gif-header-flex-unit"
+                style={styles.gifHeaderContainer()}
+              >
+                {/* grid icon  */}
+                {/* threeline icon */}
+              </div>
+            </div>
+
+            <div
+              id="main-gif-container"
+              style={styles.gifMainContainer()}
+            >
+              {getGIFs().map((gif, i) => (
+                <div
+                  key={"gif-" + i}
+                  className="main-gif-unit"
+                  style={styles.mainGifUnit(gif, randomHeight())}
+                />
+              ))}
+            </div>
+          </div>
+
           <div className="images-grid-unit" />
         </div>
         <div className="sub-grid-unit" style={styles.subImageContainer(4)} />

@@ -1,7 +1,7 @@
 import Nav from "../Presentational/Nav";
 import styles from "../../util/styles";
 import Search from "../Presentational/Search";
-import { getTrending } from "../../util/helpers";
+import { getTrending, getGIFs } from "../../util/helpers";
 import DefaultImage from "../Presentational/DefaultImage";
 import MainHeadLine from "../Presentational/MainHeadLine";
 import MainHeader from "../Presentational/MainHeader";
@@ -25,9 +25,7 @@ function Home() {
       </div>
 
       <div className="main-grid-unit" style={styles.mainImageContainer()}>
-        <div className="sub-grid-unit" style={styles.subImageContainer(0)}>
-          empty
-        </div>
+        <div className="sub-grid-unit" style={styles.subImageContainer(0)} />
 
         <div
           className="sub-grid-unit"
@@ -94,56 +92,36 @@ function Home() {
               >
                 <i
                   className="fa-solid fa-chevron-left"
-                  style={{ color: "white" }}
+                  style={styles.storiesArrow()}
                 />
                 <i
                   className="fa-solid fa-chevron-right"
-                  style={{ color: "white" }}
+                  style={styles.storiesArrow()}
                 />
               </div>
             </div>
-
             <div className="stories-unit">
               <div
                 id="stories-images-grid-main"
                 style={styles.storiesImageGrid()}
               >
-                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <CardStack
-                    src={
-                      "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGVrc3ptOTRmMnR3MGc0OHljYTR3djZrcG1qYnVwdW94bDB5aTFudSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oFzmjQnLXU2JBAC1q/giphy.gif"
-                    }
-
-                  />
-                </div>
-
-                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <CardStack
-                   src={"https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGs1Zzd5NmdlZWk5YmZlMmt0MnBtMnFrczdteTIzNWJpZGEyZGx0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEdv1yRZQ4jtfKnx6/giphy.gif"}
-                   />
-                </div>
-
-                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <CardStack 
-                  src={"https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTAzY3ZrdThtbjhnb2JoMWthMnNlb3Z1bmwwa2J1azRpM3o2MHlqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnGLxhB7NjOYBEs/giphy.gif"}
-                  />
-                </div>
-
-                <div id="images-grid-main-unit" style={styles.imagesGridUnit()}>
-                  <CardStack 
-                  src={"https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2lsdWI0amZkdnF1YTdoa2g0d2JiM25kbTY0Z3IxZmh2b3ZnMzk0dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13hu4rVisIGF5S/giphy.gif"}
-                  />
-                </div>
+                {getGIFs().map((src, i) => (
+                  <div
+                    key={"gif" + i}
+                    id="images-grid-main-unit"
+                    style={styles.imagesGridUnit()}
+                  >
+                    <CardStack src={src} />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="images-grid-unit"></div>
-          <div className="images-grid-unit"></div>
+          <div className="images-grid-unit" />
+          <div className="images-grid-unit" />
         </div>
-        <div className="sub-grid-unit" style={styles.subImageContainer(4)}>
-          empty here
-        </div>
+        <div className="sub-grid-unit" style={styles.subImageContainer(4)} />
       </div>
     </div>
   );

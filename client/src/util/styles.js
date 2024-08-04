@@ -183,6 +183,9 @@ const styles = {
     paddingLeft: "5%",
     gap: "1%"
   }),
+  storiesArrow: () => ({
+    color: 'white'
+  }),
   imagesGridUnit: () => ({
     // border: "1px solid red",
   }),

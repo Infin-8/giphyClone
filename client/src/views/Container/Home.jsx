@@ -1,7 +1,7 @@
-import Nav from "../Presentational/Nav";
 import styles from "../../util/styles";
-import Search from "../Presentational/Search";
 import { getTrending, getGIFs } from "../../util/helpers";
+import Nav from "../Presentational/Nav";
+import Search from "../Presentational/Search";
 import DefaultImage from "../Presentational/DefaultImage";
 import MainHeadLine from "../Presentational/MainHeadLine";
 import MainHeader from "../Presentational/MainHeader";
@@ -12,6 +12,8 @@ import TikTok from "../Presentational/TikTok";
 import Trending from "../Presentational/Trending";
 import ImagesHeadLine from "../Presentational/ImagesHeadLine";
 import CardStack from "../Presentational/CardStack";
+import Arrows from "../Presentational/Arrows";
+import StoriesHeader from "../Presentational/StoriesHeader";
 
 function Home() {
   return (
@@ -77,28 +79,8 @@ function Home() {
 
           <div className="images-grid-unit" style={styles.storiesMain()}>
             <div className="stories-unit" style={styles.storiesMainContainer()}>
-              <div className="stories-flex-unit" style={styles.storiesHeader()}>
-                Stories{" "}
-                <span>
-                  <i
-                    class="fa-solid fa-chevron-right"
-                    style={{ fontSize: "small" }}
-                  />
-                </span>
-              </div>
-              <div
-                className="stories-flex-unit"
-                style={styles.storiesFlexItem(true)}
-              >
-                <i
-                  className="fa-solid fa-chevron-left"
-                  style={styles.storiesArrow()}
-                />
-                <i
-                  className="fa-solid fa-chevron-right"
-                  style={styles.storiesArrow()}
-                />
-              </div>
+              <StoriesHeader />
+              <Arrows />
             </div>
             <div className="stories-unit">
               <div

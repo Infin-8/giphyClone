@@ -186,7 +186,7 @@ const styles = {
   imagesGridUnit: () => ({
     // border: "1px solid red",
   }),
-  featuredMain: (position) => ({
+  featuredMain: () => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -196,7 +196,7 @@ const styles = {
     width: "100%",
     zIndex: "1"
   }),
-  featuredSub: (position) => ({
+  featuredSub: (position, src = "") => ({
     width: position === 0 ? "100%" : position === 1 ? "93%" : "88%",
     borderBottom:
       position === 2
@@ -206,7 +206,11 @@ const styles = {
         : position === 0 
         ? "5px solid rgba(125, 45, 208, 1)"
         : null,
-      zIndex: "1"
+      zIndex: "1",
+      height: position === 0 ?  "100%": null,
+      backgroundImage: `url(${src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
   }),
 };
 

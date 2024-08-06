@@ -118,7 +118,7 @@ function Home() {
               }}
             >
               <div
-                id="gif-header-flex-unit"
+                className="gif-header-flex-unit"
                 style={styles.gifHeaderContainer()}
               >
                 <p style={{ color: "rgba(166, 166, 166, 1)" }}>
@@ -126,7 +126,7 @@ function Home() {
                 </p>
               </div>
               <div
-                id="gif-header-flex-unit"
+                className="gif-header-flex-unit"
                 style={styles.gifHeaderContainer()}
               >
                 {/* grid icon  */}
@@ -142,7 +142,7 @@ function Home() {
                 <div
                   key={"gif-" + i}
                   className="main-gif-unit"
-                  style={styles.mainGifUnit(gif, randomHeight())}
+                  style={styles.mainGifUnit(gif, "100%")}
                 />
               ))}
             </div>

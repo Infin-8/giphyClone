@@ -220,6 +220,8 @@ const styles = {
     backgroundImage: `url(${src})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    borderRadius: "10px"
+
   }),
   mainGifGridContainer: () => ({
     display: "grid",
@@ -238,11 +240,12 @@ const styles = {
   }),
   gifMainContainer: () => ({
     display: "grid",
-    gridTemplateColumns: `repeat(3, minmax(30%, 1fr))`,
+    gridTemplateColumns: `repeat(3, minmax(200px, 1fr))`,
+    gridAutoColumns: "min-content",
     gap: "2%",
     width: "100%",
-    height: "95%",
-    marginTop: "3%",
+    height: "100%",
+    // marginTop: "3%",
   })
 };
 

@@ -19,9 +19,10 @@ import ImagesHeadLine from "../Presentational/ImagesHeadLine";
 import CardStack from "../Presentational/CardStack";
 import Arrows from "../Presentational/Arrows";
 import StoriesHeader from "../Presentational/StoriesHeader";
+import GifHeader from "../Presentational/GifHeader";
+import GifGrid from "../Presentational/GifGrid";
 
 function Home() {
-
   return (
     <div style={styles.gridContainer()}>
       <div className="main-grid unit" style={styles.navContainerUnit()}>
@@ -110,42 +111,12 @@ function Home() {
             className="images-grid-unit"
             style={styles.mainGifGridContainer()}
           >
-            <div
-              id="sub-gif-container"
-              style={{
-                ...styles.quickFlex(),
-                justifyContent: "space-evenly",
-              }}
-            >
-              <div
-                className="gif-header-flex-unit"
-                style={styles.gifHeaderContainer()}
-              >
-                <p style={{ color: "rgba(166, 166, 166, 1)" }}>
-                  All Entertainment GIFs
-                </p>
-              </div>
-              <div
-                className="gif-header-flex-unit"
-                style={styles.gifHeaderContainer()}
-              >
-                {/* grid icon  */}
-                {/* threeline icon */}
-              </div>
-            </div>
-
-            <div
-              id="main-gif-container"
-              style={styles.gifMainContainer()}
-            >
-              {getGIFs().map((gif, i) => (
-                <div
-                  key={"gif-" + i}
-                  className="main-gif-unit"
-                  style={styles.mainGifUnit(gif, "100%")}
-                />
-              ))}
-            </div>
+            <GifHeader />
+            <GifGrid 
+            // randomHeight={randomHeight()} 
+            // this needs to be optimized
+            getGIFs={getGIFs}
+            />
           </div>
 
           <div className="images-grid-unit" />
